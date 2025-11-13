@@ -6,12 +6,12 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import LabelEncoder
 import pickle
 
-df = pd.read_csv("Iris.csv")
+df = pd.read_csv("Heart.csv")
 
-X = df.iloc[:,1:-1]
+X = df.iloc[:,: -1]
 le = LabelEncoder()
 
-y = le.fit_transform(df.iloc[:,-1])
+y = le.fit_transform(df["Thal"])
 
 X_train, X_test, y_trian, y_test = train_test_split(X,y,train_size=0.25,random_state=0)
 
