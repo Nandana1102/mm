@@ -1,0 +1,6 @@
+docker build -t mlops .
+docker images
+
+docker run -p 5000:5000 mlops
+
+  give /predict
