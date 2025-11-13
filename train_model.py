@@ -16,12 +16,11 @@ y = le.fit_transform(df["Thal"])
 X_train, X_test, y_trian, y_test = train_test_split(X,y,train_size=0.25,random_state=0)
 
 rdcmodel = RandomForestClassifier(n_estimators=200,random_state=42)
-drcmodel = DecisionTreeClassifier(criterion="entropy",random_state=0)
-lrmodel = LinearRegression()
+
 
 rdcmodel.fit(X_train,y_trian)
-drcmodel.fit(X_train,y_trian)
-lrmodel.fit(X_train,y_trian)
+
+
 
 # print(rdcmodel.predict([[5.1,3.5,1.4,0.2]]))
 
